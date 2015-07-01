@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: vda2_production
-  username: vda2
-  password: <%= ENV['VDA2_DATABASE_PASSWORD'] %>

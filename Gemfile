@@ -30,6 +30,8 @@ group :development do
 end
 
 gem 'devise'
+gem 'responders'
+gem 'railties'
 gem 'cancan'
 gem 'settingslogic'
 gem 'enumerize'

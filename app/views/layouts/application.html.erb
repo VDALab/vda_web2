@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
 
-<%= yield %>
-
+  </header>
+  <section>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </section>
+  <footer>
+    <div class="copyright">
+        <p>All Content Copyright © 2015 NCTU VLSI Design Automation Lab. All rights reserved</p>
+    </div>
+  </footer>
 </body>
 </html>

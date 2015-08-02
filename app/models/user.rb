@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,:confirmable
   devise :omniauthable, :omniauth_providers => [:google_oauth2]
+  mount_uploader :avatar, AvatarUploader
 
   def self.from_omniauth(auth)
     where(email: auth.info.email.downcase).first_or_create do |user|

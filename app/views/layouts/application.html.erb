@@ -8,15 +8,27 @@
 </head>
 <body>
   <header>
-    <p class="navbar-text pull-right">
+    <div class='container'>
+    <p class='navbar-text'>
+      <%= link_to (image_tag 'vda_logo.jpg', width:80), root_path%>
+      <h1> NCTU VLSI Design Automation Lab</h1>
+      <p class="navbar-text pull-right">
+    
+
+    
     <% if user_signed_in? %>
       Welcome <strong><%= current_user.first_name %> <%= current_user.last_name%></strong>.
       <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= image_tag current_user.avatar.file%>
       <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
     <% else %>
       <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
       <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+
     <% end %>
+    </p>
+    </p>
+    </div>
   </header>
 
   <section>
@@ -31,8 +43,10 @@
     </div>
   </section>
   <footer>
-    <div class="copyright">
-        <p>All Content Copyright © 2015 NCTU VLSI Design Automation Lab. All rights reserved</p>
+    <div class="container">
+      <div class="copyright">
+          <p>All Content Copyright © 2015 NCTU VLSI Design Automation Lab. All rights reserved</p>
+      </div>
     </div>
   </footer>
 </body>
